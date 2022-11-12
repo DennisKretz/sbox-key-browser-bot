@@ -41,9 +41,9 @@ function isUserInRaffle(users, main_user_avatar) {
 
 function getMainUser() {
     console.log("getting main user");
-    var main_user_avatar = document.querySelectorAll('[src="https://avatars.akamai.steamstatic.com/7751ce65fb24c994da563cbf13b2e1d68a7f38ce_full.jpg"]');
+    var main_user_avatar = document.getElementsByClassName("avatar")
 
-    main_user_avatar = main_user_avatar[0]["src"].replace('full.jpg', '');
+    main_user_avatar = main_user_avatar[0]["currentSrc"].replace('full.jpg', '');
 
     return main_user_avatar
 }
