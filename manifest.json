@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "sBox Browser bot",
+    "description": "Thanks for banning me from discord. RIOT FANBOYS",
+    "author": "DEEKAY",
+    "content_scripts": [
+        {
+            "matches":["https://asset.party/get/developer/preview"],
+            "js":["bot.js"]
+        }
+    ]
+}
