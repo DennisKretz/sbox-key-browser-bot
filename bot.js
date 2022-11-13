@@ -58,7 +58,7 @@ function getMainUser() {
 
 function getUsers() {
     console.log("getting users");
-    let i = 0;
+    
     const raffle_container = document.querySelectorAll('[class="is-flex is-wrap"]');
 
     return raffle_container[0]["children"]        
