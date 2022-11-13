@@ -12,6 +12,14 @@ function launch() {
         clickEnterButton();
         console.log("relaunching")
     }
+
+    if (checkReloadNeeded() == true) {
+        location.reload();
+    }
+
+    if (checkReloadNeeded() == false) {
+        console.log("no reload needed");
+    }
     reCheck();
 }
 
@@ -50,14 +58,19 @@ function getMainUser() {
 
 function getUsers() {
     console.log("getting users");
-    let i = 0;
+    
     const raffle_container = document.querySelectorAll('[class="is-flex is-wrap"]');
 
     return raffle_container[0]["children"]        
 }
 
 function checkReloadNeeded() {
-    null
+    const reload_class = document.getElementsByClassName('components-reconnect-rejected');
+
+    if (reload_class[0] != undefined) {
+        return true
+    }
+    return false
 }
 
 async function clickEnterButton() {
