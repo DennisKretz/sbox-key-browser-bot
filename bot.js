@@ -12,6 +12,14 @@ function launch() {
         clickEnterButton();
         console.log("relaunching")
     }
+
+    if (checkReloadNeeded() == true) {
+        location.reload();
+    }
+
+    if (checkReloadNeeded() == false) {
+        console.log("no reload needed");
+    }
     reCheck();
 }
 
@@ -57,7 +65,12 @@ function getUsers() {
 }
 
 function checkReloadNeeded() {
-    null
+    const reload_class = document.getElementsByClassName('components-reconnect-rejected');
+
+    if (reload_class[0] != undefined) {
+        return true
+    }
+    return false
 }
 
 async function clickEnterButton() {
